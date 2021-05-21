@@ -17,18 +17,18 @@ for (i = 0; i < 3; i++)
 {
 for (j = 0; j < 3; j++)
 {
-	if (j)
-		printf(" ");
-	printf("%d", grid1[i][j]);
+if (j)
+printf(" ");
+printf("%d", grid1[i][j]);
 }
 
 printf(" %c ", (i == 1 ? '+' : ' '));
 
 for (j = 0; j < 3; j++)
 {
-	if (j)
-		printf(" ");
-	printf("%d", grid2[i][j]);
+if (j)
+printf(" ");
+printf("%d", grid2[i][j]);
 }
 printf("\n");
 }
@@ -47,9 +47,9 @@ for (i = 0; i < 3; i++)
 {
 for (j = 0; j < 3; j++)
 {
-	if (j)
-		printf(" ");
-	printf("%d", grid[i][j]);
+if (j)
+printf(" ");
+printf("%d", grid[i][j]);
 }
 printf("\n");
 }
