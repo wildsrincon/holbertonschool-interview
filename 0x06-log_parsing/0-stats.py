@@ -19,11 +19,11 @@ size = 0
 
 
 def print_stats():
-	"""Prints the accumulated logs"""
-	print("File size: {}".format(size))
-	for status in sorted(status_codes.keys()):
-		if status_codes[status]:
-			print("{}: {}".format(status, status_codes[status]))
+    """Prints the accumulated logs"""
+    print("File size: {}".format(size))
+    for status in sorted(status_codes.keys()):
+        if status_codes[status]:
+            print("{}: {}".format(status, status_codes[status]))
 
 
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 size += int(items[-1])
                 if items[-2] in status_codes:
                     status_codes[items[-2]] += 1
-            except:
+            except Exception as e:
                 pass
             if count == 9:
                 print_stats()
@@ -45,4 +45,3 @@ if __name__ == "__main__":
         print_stats()
         raise
     print_stats()
-    
