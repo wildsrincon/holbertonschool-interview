@@ -1,72 +1,89 @@
 #!/usr/bin/python3
 """ Solving n queens """
 
-
 import sys
-# error handling for argv[1]
 
-if __name__ == "__main__":
-    if len(sys.argv) == 1 or len(sys.argv) > 2:
-        print("Usage: nqueens N")
-        sys.exit(1)
-    N = sys.argv[1]
-    try:
-        N_int = int(N)
-    except ValueError:
-        print("N must be a number")
-        sys.exit(1)
-    if N_int < 4:
-        print("N must be at least 4")
-        sys.exit(1)
 
-# n queens methods
+if len(sys.argv) != 2:
+    print('Usage: nqueens N')
+    exit(1)
+N = sys.argv[1]
+try:
+    N = int(N)
+except ValueError:
+    print('N must be a number')
+    exit(1)
 
-    coords = []
+if N < 4:
+    print('N must be at least 4')
+    exit(1)
 
-    def isSafe(coords, row, col):
-        """ Checks if queen can be placed in coord of board.
-        Returns True if can, else False
-        """
-        rows = []
-        cols = []
-        diag_r = []
-        diag_l = []
+k = 1
 
-        for square in coords:
-            rows.append(square[0])
-            cols.append(square[1])
-            diag_r.append(square[0] + square[1])
-            diag_l.append(square[1] - square[0])
 
-        if row in rows or col in cols:
+def printSolution(board):
+    """
+    print Solution
+    """
+    queens = []
+    global k
+    k = k + 1
+    for i in range(N):
+        for j in range(N):
+            if board[i][j] == 1:
+                queens.append([i, j])
+    print(queens)
+
+
+def isSafe(board, row, col):
+    """
+    isSafe
+    """
+    for i in range(col):
+        if board[row][i]:
             return False
-        if row + col in diag_r or col - row in diag_l:
+    i = row
+    j = col
+    while i >= 0 and j >= 0:
+        if board[i][j]:
             return False
+        i -= 1
+        j -= 1
+    i = row
+    j = col
+    while j >= 0 and i < N:
+        if board[i][j]:
+            return False
+        i = i + 1
+        j = j - 1
+    return True
 
+
+def solveNQUtil(board, col):
+    """
+    solve NQtil
+    """
+    if col == N:
+        printSolution(board)
         return True
+    res = False
+    for i in range(N):
+        if isSafe(board, i, col):
+            board[i][col] = 1
+            res = solveNQUtil(board, col + 1) or res
+            board[i][col] = 0
+    return res
 
-    def solveNqueens(coords, col, safe_queens=[]):
-        """ Creates array of queen positions
-        Returns array
-        """
-        for x in range(N_int):
-            if isSafe(coords, x, col):
-                coords.append([x, col])
-                if col == N_int - 1:
-                    safe_queens.append(coords.copy())
-                    del coords[-1]
-                else:
-                    solveNqueens(coords, col + 1)
 
-        if len(coords):
-            del coords[-1]
-        return safe_queens
+def solveNQ():
+    """
+    solve NQ
+    """
+    board = [[0 for j in range(N)] for i in range(N)]
+    if solveNQUtil(board, 0) is False:
+        pass
+        return
+    return
 
-# sets base case for recursion
 
-    coords = solveNqueens(coords, 0)
-
-# prints coords of squares for safe queens
-
-    for squares in coords:
-        print(squares)
+solveNQ()
