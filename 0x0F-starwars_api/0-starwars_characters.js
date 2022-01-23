@@ -13,7 +13,7 @@ request(url, async function (error, response, body) {
       const res = await new Promise((resolve, reject) => {
         request(character, (error, res, html) => {
           if (error) {
-            reject(error);
+            reject(error)
           } else {
             resolve(JSON.parse(html).name);
           }
