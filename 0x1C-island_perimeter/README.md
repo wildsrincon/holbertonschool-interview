@@ -39,7 +39,4 @@ guillaume@ubuntu:~/0x1C$
 
 
 ## Author ✒️
-
-_Developed by_
-
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon)

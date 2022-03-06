@@ -42,4 +42,4 @@ typedef struct binary_tree_s avl_t;
 
 ## Author ✒️
 
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon)

@@ -130,5 +130,4 @@ Holberton
         ->next: Engineer
 alexa@ubuntu:0x1A-double_circular_linked_list$ 
 ```
-
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon)
