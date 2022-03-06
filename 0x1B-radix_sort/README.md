@@ -76,4 +76,4 @@ alexa@ubuntu-xenial:0x1B-radix_sort$
 ```
 
 
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon)
