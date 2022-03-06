@@ -44,4 +44,4 @@ carrie@ubuntu:~/0x19-making_change$
 
 ## Author ✒️
 
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)(https://www.linkedin.com/in/yoyman-castellar/) 
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon) 
