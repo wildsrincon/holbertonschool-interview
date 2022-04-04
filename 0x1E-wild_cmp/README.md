@@ -10,4 +10,4 @@ Write a function that compares two strings and returns 1 if the strings can be c
 
 ## Author ✒️
 
-* **David De La Hoz** - [daviddlhz](https://github.com/daviddlhz)
+* **Wilder Rincon** - [wildsrincon](https://github.com/wildsrincon)
